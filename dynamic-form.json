@@ -1,0 +1,54 @@
+{
+  "labels": [
+    "Math",
+    "Science",
+    "SST",
+    "Hindi",
+    "English",
+    "Total"
+  ],
+  "dynamicFormData": {
+    "Cell_0": {
+      "required": true,
+      "readOnly": false,
+      "label": "Math",
+      "inputType": "Text",
+      "formula": ""
+    },
+    "Cell_1": {
+      "required": true,
+      "readOnly": false,
+      "label": "Science",
+      "inputType": "Text",
+      "formula": ""
+    },
+    "Cell_2": {
+      "required": true,
+      "readOnly": false,
+      "label": "SST",
+      "inputType": "Text",
+      "formula": ""
+    },
+    "Cell_3": {
+      "required": true,
+      "readOnly": false,
+      "label": "Hindi",
+      "inputType": "Text",
+      "formula": ""
+    },
+    "Cell_4": {
+      "required": true,
+      "readOnly": false,
+      "label": "English",
+      "inputType": "Text",
+      "formula": ""
+    },
+    "Cell_5": {
+      "required": true,
+      "readOnly": true,
+      "label": "Total",
+      "inputType": "Text",
+      "formula": "Cell_0+Cell_2+Cell_3+Cell_4"
+    }
+  }
+}
