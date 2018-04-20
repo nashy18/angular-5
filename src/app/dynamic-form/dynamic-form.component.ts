@@ -4,7 +4,7 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 import { DynamicFormService } from './dynamic-form.service';
 import { HttpClient } from '@angular/common/http';
 import { Response } from '@angular/http';
-//import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'dynamic-form',
@@ -13,8 +13,8 @@ import { Response } from '@angular/http';
   providers: [DynamicFormService]
 })
 export class DynamicFormComponent implements OnInit {
-  myvart = 12;
   formData = {};
+  formName = ["QMR-14"];
   inputTypes = [
     "Text", "DropDown", "Radio", "TextArea"
   ];
@@ -29,7 +29,7 @@ export class DynamicFormComponent implements OnInit {
   public formTableRows: Array<number>;
   public finalObj: Object;
   public myData: Object;
-  public inputRows: string;
+  public input: Object;
 
   constructor(private http: HttpClient) {
     this.columns = ["label", "label2", "label3", "label4"];
@@ -38,7 +38,7 @@ export class DynamicFormComponent implements OnInit {
     this.formTableRows = [];
     this.finalObj = {};
     this.myData = null;
-    this.inputRows = "";
+    this.input = {};
   }
   ngOnInit() {
 
@@ -50,7 +50,7 @@ export class DynamicFormComponent implements OnInit {
       this.myData = "";
       this.finalObj = {};
       this.formTableRows = [];
-      this.inputRows = "";
+      this.input = {};
     }
     else {
       let labels = [];
@@ -64,7 +64,7 @@ export class DynamicFormComponent implements OnInit {
       }
       let output = {};
       output["labels"]= labels;
-      output["dynamicFormData"] = data;
+      output["QMR-14"] = data;
       this.myData = JSON.stringify(output);
       console.log(data);
     }
@@ -74,9 +74,10 @@ export class DynamicFormComponent implements OnInit {
     this.finalObj = {};
     this.showTable = false;
     this.formTableRows = [];
-    this.inputRows= "";
-    if (!Number(data)) return alert("You can enter only numbers");
-    for (let index = 0; index < data; index++) {
+    this.input = {};
+    if (!data.formName) return alert("Please Select Form Name");
+    if (!Number(data.rows)) return alert("You can enter only numbers");
+    for (let index = 0; index < data.rows; index++) {
       this.formTableRows.push(index);
       this.finalObj["Cell_" + index] = {};
       this.finalObj["Cell_" + index]["required"] = false;

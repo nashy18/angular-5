@@ -2,14 +2,19 @@
     <div class="row">
         <div class="panel panel-default" style="margin-top:10px;">
             <div class="panel-heading">
-                Number of Columns
+                Dynamic Form Creation
             </div>
             <div class="panel-body" style="position:relative">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Enter Number of Columns" id="txtInputRows" [(ngModel)]="inputRows">
+                    <label>Form Name</label>
+                    <ng-select [items]="formName" bindLabel="Form Name" placeholder="Select" appendTo="body" [(ngModel)]="input.formName"></ng-select>
+                </div>
+                <div class="form-group">
+                    <label>Colums</label>
+                    <input type="text" class="form-control" placeholder="Enter Number of Columns" id="txtInputRows" [(ngModel)]="input.rows">
                 </div>
                 <div class="form-group pull-left">
-                    <button (click)="formTable($event, inputRows)" class="btn btn-success">Submit</button>
+                    <button (click)="formTable($event, input)" class="btn btn-success">Submit</button>
                 </div>
             </div>
         </div>
