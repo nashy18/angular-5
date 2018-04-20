@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { ChatComponent } from './chat/chat.component';
 import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
+import { UserComponent } from './user/user.component';
 import { NgSelectModule, NG_SELECT_DEFAULT_CONFIG } from '@ng-select/ng-select';
 
 //https://scotch.io/bar-talk/getting-to-know-angular-2s-module-ngmodule
@@ -30,6 +31,10 @@ import { NgSelectModule, NG_SELECT_DEFAULT_CONFIG } from '@ng-select/ng-select';
         {
           path: 'dynamic-form',
           component: DynamicFormComponent
+        },
+        {
+          path: 'user',
+          component: UserComponent
         }
       ])
   ],
@@ -37,7 +42,8 @@ import { NgSelectModule, NG_SELECT_DEFAULT_CONFIG } from '@ng-select/ng-select';
     AppComponent,
     LandingComponent,
     ChatComponent,
-    DynamicFormComponent
+    DynamicFormComponent,
+    UserComponent
   ],
   providers: [
         {

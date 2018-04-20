@@ -1,0 +1,160 @@
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">Bertha - Weight Checks</div>
+            <div class="panel-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputDate" class="col-sm-4 control-label text-left">Date:</label>
+                        <div class="col-sm-8">
+                            <input type="date" class="form-control" id="inputDate" placeholder="Email" required="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemCode" class="col-sm-4 control-label text-left">Item Code:</label>
+                        <div class="col-sm-8">
+                            <ng-select [items]="itemCode" bindLabel="Item Code" placeholder="Select Item Code" appendTo="body" [(ngModel)]="formData.itemCode"></ng-select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputProduct" class="col-sm-4 control-label text-left">Product:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="inputProduct" placeholder="Product" required="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputNetWght" class="col-sm-4 control-label text-left">Net Weight:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="inputNetWght" placeholder="Net Weight" required="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputBestBefore" class="col-sm-4 control-label text-left">Best Before:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="inputBestBefore" placeholder="Best Before" required="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputDateCodeFormat" class="col-sm-4 control-label text-left">Date Code Format:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="inputDateCodeFormat" placeholder="Date Code Format" required="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputUPCCode" class="col-sm-4 control-label text-left">UPC Code of Bag:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="inputUPCCode" placeholder="UPC Code of Bag" required="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPicDataCodeBag" class="col-sm-4 control-label text-left">Picture of the Data Code Format on the Bag:</label>
+                        <div class="col-sm-8">
+                            <input type="file" class="form-control" id="inputPicDataCodeBag" required="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPicProductRecipe" class="col-sm-4 control-label text-left">Picture of Finished Product Recipe:</label>
+                        <div class="col-sm-8">
+                            <input type="file" class="form-control" id="inputPicProductRecipe" required="true">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">&nbsp;</div>
+    <div class="row">
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-center">
+                            Bag Lot Number
+                        </th>
+                        <th class="text-center">
+                            Pictures
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="text" class="form-control" id="inputBagLot" placeholder="Bag Lot Number" required="true">
+                        </td>
+                        <td>
+                            <input type="file" class="form-control" id="inputPicture1"  required="true">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="form-control" id="inputBagLot" placeholder="Bag Lot Number" required="true">
+                        </td>
+                        <td>
+                            <input type="file" class="form-control" id="inputPicture2"  required="true">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">&nbsp;</div>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">Product Verification</div>
+            <div class="panel-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputSuperviserDay" class="col-sm-4 control-label text-left">Superviser Day:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="inputSuperviserDay" placeholder="Superviser Day" required="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputSuperviserNight" class="col-sm-4 control-label text-left">Superviser Night:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="inputSuperviserNight" placeholder="Superviser Night" required="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputQC" class="col-sm-4 control-label text-left">Quality Control:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="inputQC" placeholder="Quality Control" required="true">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">&nbsp;</div>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">Overall Data</div>
+            <div class="panel-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-4 control-label text-left">Total Average Net Weight:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="inputEmail3" placeholder="Total Average Net Weight" required="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-4 control-label text-left">Low Limit:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="inputPassword3" placeholder="Low Limit" required="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-4 control-label text-left">High Limit:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="inputEmail3" placeholder="High Limit" required="true">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">&nbsp;</div>
+    <p class="h2">Dynamic Form Tabular Content</p>
+</div>
